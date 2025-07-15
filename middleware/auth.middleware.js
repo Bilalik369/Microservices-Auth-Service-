@@ -32,3 +32,5 @@ export const authenticateToken = async (req, res, next) => {
     return res.status(401).json({ msg: "Token invalide" });
   }
 };
+
+

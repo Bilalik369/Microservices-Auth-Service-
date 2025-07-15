@@ -83,3 +83,14 @@ export const login = async(req ,res)=>{
         res.status(500).json({msg : "Erreur serveur lors de la connexion"})
     }
 }
+
+export const getProfile = async(req , res)=>{
+    try {
+        res.status(201).json({
+            success : true,
+            user : req.user,
+        })
+    } catch (error) {
+        res.status(500).json({ msg: 'Erreur serveur' });
+    }
+}
