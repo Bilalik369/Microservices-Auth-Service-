@@ -1,10 +1,21 @@
 {
   "type": "module",
-  "dependencies": {
-    "bcrypt": "^6.0.0",
-    "dotenv": "^17.2.0",
-    "express": "^5.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.16.3"
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    }
+  },
+  "devDependencies": {
+    "jest": "^30.0.4",
+    "babel-jest": "^30.0.4",
+    "@babel/preset-env": "^7.28.0",
+    "supertest": "^7.1.3"
   }
 }
